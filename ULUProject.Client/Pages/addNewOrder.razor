@@ -1,0 +1,99 @@
+@page  "/addNewOrder"
+@using ULUProject.Shared;
+@inject HttpClient Http;
+@inject IUriHelper uriHelper;
+
+<div class="heading-holder">
+    <div class="heading">
+        <h1>
+            <span>Add a New Purchase Order</span>
+        </h1>
+    </div>
+</div>
+
+<div class="form-holder">
+    <EditForm onValidSubmit="AddPurchaseOrder" Model="@purchaseOrder">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form row">
+            <div class="col-md-12 col-lg-8 col-xl-8">
+                <div class="form-field-holder row my-1">
+                    <div class="field-label col-md-6 col-form-label">
+                        <label for="product-name">
+                            <span>Product Name</span>
+                        </label>
+                    </div>
+                    <div class="field-input col-md-6">
+                        <input type="text" class="form-control" name="product-name" autofocus="true" placeholder="Name of the Product" 
+                               bind-Value="@purchaseOrder.ProductName" required/>
+                    </div>
+                </div>
+                <div class="form-field-holder row my-1">
+                    <div class="field-label col-md-6 col-form-label">
+                        <label for="product-quantity">
+                            <span>Quantity</span>
+                        </label>
+                    </div>
+                    <div class="field-input col-md-6">
+                        <input type="number" class="form-control" name="product-quantity" placeholder="Desired Quantity" 
+                               bind-Value="@purchaseOrder.Quantity" required/>
+                    </div>
+                </div>
+                <div class="form-field-holder row my-1">
+                    <div class="field-label col-md-6 col-form-label">
+                        <label for="shipping-address">
+                            <span>Shipping Address</span>
+                        </label>
+                    </div>
+                    <div class="field-input col-md-6">
+                        <textarea class="form-control" name="shipping-address" placeholder="Shipping Address" 
+                                  bind-Value="@purchaseOrder.ShippingAddress" required></textarea>
+                    </div>
+                </div>
+                <div class="form-field-holder row my-1">
+                    <div class="field-label col-md-6 col-form-label">
+                        <label for="billing-address">
+                            <span>Billing Address</span>
+                        </label>
+                    </div>
+                    <div class="field-input col-md-6">
+                        <textarea class="form-control" name="billing-address" placeholder="Billing Address" 
+                                  bind-Value="@purchaseOrder.BillingAddress"></textarea>
+                    </div>
+                </div>
+                <div class="form-field-holder row my-1">
+                    <div class="field-label col-md-6 col-form-label">
+                        <label for="contact-name">
+                            <span>Contact Person Name</span>
+                        </label>
+                    </div>
+                    <div class="field-input col-md-6">
+                        <input type="text" class="form-control" name="contact-name" placeholder="Contact Person Name" 
+                               bind-Value="@purchaseOrder.ContactPersonName" required/>
+                    </div>
+                </div>
+                <div class="form-button-holder row my-1 justify-content-center align-items-center">
+                    <div class="form-button col-md-6">
+                        <button type="submit" ref="addButton" class="btn btn-block btn-success">
+                            <span>Submit</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+</div>
+
+
+@code {
+PurchaseOrder purchaseOrder = new PurchaseOrder();
+
+async Task AddPurchaseOrder()
+{
+    //var poContent = new HttpContent(purchaseOrder.ToString());
+    var response = await Http.PostJsonAsync<string>("https://uluprojectapi20190629064349.azurewebsites.net/api/Product/AddPurchaseOrder", purchaseOrder.ToString());
+    uriHelper.NavigateTo("purchaseOrders");
+    Console.WriteLine(response);
+}
+
+
+}

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29006.145
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULUProject.Server", "..\ULUProject.Server\ULUProject.Server.csproj", "{99BD1E67-0DCB-41B8-919E-AFDDB8D2C80F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ULUProject.Server", "..\ULUProject.Server\ULUProject.Server.csproj", "{99BD1E67-0DCB-41B8-919E-AFDDB8D2C80F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULUProject.Client", "..\ULUProject.Client\ULUProject.Client.csproj", "{F3918654-64E2-44D7-B691-61ECCB964D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ULUProject.Client", "..\ULUProject.Client\ULUProject.Client.csproj", "{F3918654-64E2-44D7-B691-61ECCB964D3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULUProject.Shared", "..\ULUProject.Shared\ULUProject.Shared.csproj", "{3BD466A5-0F2C-40DF-AF33-972E908CBB17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ULUProject.Shared", "..\ULUProject.Shared\ULUProject.Shared.csproj", "{3BD466A5-0F2C-40DF-AF33-972E908CBB17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

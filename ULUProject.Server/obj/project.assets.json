@@ -3157,11 +3157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Server\\ULUProject.Server.csproj",
+      "projectUniqueName": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Server\\ULUProject.Server.csproj",
       "projectName": "ULUProject.Server",
-      "projectPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Server\\ULUProject.Server.csproj",
+      "projectPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Server\\ULUProject.Server.csproj",
       "packagesPath": "C:\\Users\\clientdemo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Server\\obj\\",
+      "outputPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3180,11 +3180,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Client\\ULUProject.Client.csproj": {
-              "projectPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Client\\ULUProject.Client.csproj"
+            "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Client\\ULUProject.Client.csproj": {
+              "projectPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Client\\ULUProject.Client.csproj"
             },
-            "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Shared\\ULUProject.Shared.csproj": {
-              "projectPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Shared\\ULUProject.Shared.csproj"
+            "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Shared\\ULUProject.Shared.csproj": {
+              "projectPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Shared\\ULUProject.Shared.csproj"
             }
           }
         }

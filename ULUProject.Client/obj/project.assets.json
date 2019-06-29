@@ -959,11 +959,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Client\\ULUProject.Client.csproj",
+      "projectUniqueName": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Client\\ULUProject.Client.csproj",
       "projectName": "ULUProject.Client",
-      "projectPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Client\\ULUProject.Client.csproj",
+      "projectPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Client\\ULUProject.Client.csproj",
       "packagesPath": "C:\\Users\\clientdemo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Client\\obj\\",
+      "outputPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -982,8 +982,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Shared\\ULUProject.Shared.csproj": {
-              "projectPath": "C:\\Users\\clientdemo\\source\\webapp\\ULUProject.Shared\\ULUProject.Shared.csproj"
+            "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Shared\\ULUProject.Shared.csproj": {
+              "projectPath": "C:\\Users\\clientdemo\\source\\repos\\uluproject\\ULUProject.Shared\\ULUProject.Shared.csproj"
             }
           }
         }
