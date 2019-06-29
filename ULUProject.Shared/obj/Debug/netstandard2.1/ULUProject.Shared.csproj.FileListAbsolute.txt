@@ -1,0 +1,8 @@
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\bin\Debug\netstandard2.1\ULUProject.Shared.deps.json
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\bin\Debug\netstandard2.1\ULUProject.Shared.dll
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\bin\Debug\netstandard2.1\ULUProject.Shared.pdb
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\obj\Debug\netstandard2.1\ULUProject.Shared.csproj.CoreCompileInputs.cache
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\obj\Debug\netstandard2.1\ULUProject.Shared.AssemblyInfoInputs.cache
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\obj\Debug\netstandard2.1\ULUProject.Shared.AssemblyInfo.cs
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\obj\Debug\netstandard2.1\ULUProject.Shared.dll
+C:\Users\clientdemo\source\webapp\ULUProject.Shared\obj\Debug\netstandard2.1\ULUProject.Shared.pdb
