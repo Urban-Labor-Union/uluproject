@@ -1,0 +1,96 @@
+@page "/purchaseOrders"
+@using ULUProject.Shared
+@inject HttpClient Http
+
+<h1>Purchase Orders</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (pOders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <span>Filter by ProductName</span> <input width="70" @onchange=@OnProductNameChanged oninput="(this.dispatchEvent(new CustomEvent('change', {bubbles: true})))" />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Shipping Address</th>
+                <th>Billing Address</th>
+                <th>Contact Person Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var purchaseOrder in pOders)
+            {
+                <tr>
+                    <td>@purchaseOrder.PurchaseOrderId</td>
+                    <td>@purchaseOrder.ProductName</td>
+                    <td>@purchaseOrder.Quantity</td>
+                    <td>@purchaseOrder.ShippingAddress</td>
+                    <td>@purchaseOrder.BillingAddress</td>
+                    <td>@purchaseOrder.ContactPersonName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button @onclick=@onNextClicked>next</button>
+}
+
+@code {
+    PurchaseOrder[] pOders;
+    int offset = 0;
+    int next = 100;
+    string productNameFilter = "";
+
+
+    protected override async Task OnInitAsync()
+    {
+        await getPurchaseOrders();
+    }
+
+    void OnProductNameChanged(UIChangeEventArgs args)
+    {
+        string values = args.Value.ToString();
+
+        filterPurchaseOrders(values);
+    }
+
+    protected async void filterPurchaseOrders(string value)
+    {
+        offset = 0;
+        productNameFilter = value;
+        await getPurchaseOrders();
+
+    }
+
+    async Task onNextClicked()
+    {
+        await getPurchaseOrders();
+    }
+
+    protected async Task getPurchaseOrders()
+    {
+        PurchaseOrder[] orders = await Http.GetJsonAsync<PurchaseOrder[]>("https://uluprojectapi20190629064349.azurewebsites.net/api/Product/GetPurchaseOrderDetails?offset=" + offset + "&recordsToFetch=" + next + "&productNameFilter" + productNameFilter);
+
+
+        if (offset.Equals(0))
+        {
+            pOders = orders;
+        }
+        else
+        {
+            int array1OriginalLength = pOders.Length;
+            Array.Resize<PurchaseOrder>(ref pOders, array1OriginalLength + orders.Length);
+            Array.Copy(orders, 0, pOders, array1OriginalLength, orders.Length);
+        }
+        offset = offset + next;
+    }
+
+
+}
